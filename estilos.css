@@ -115,7 +115,7 @@
 .form__registro label{
     font-size: larger;
     color: blue;
-    margin: 10%;
+    margin: 5% 10px;
 }
 
 .form__registro button{
