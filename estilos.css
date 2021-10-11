@@ -25,16 +25,35 @@
     background-color: rgb(234, 250, 240);
 }
 
-.h1{
+.titulo{
     display: flex;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    color: rgb(7, 41, 7);
+    font-family:fantasy;
 }
 
 .h2{
     display: flex;
 }
 
-.p{
+.parrafo{
     display: flex;
+    margin: 20px 20px 20px 20px;
+    text-align: justify;
+}
+
+.opcionescompra{
+    background-color: white;
+    width: 100%;
+    height: 18%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+}
+.imagenEnvio{
+    width: 30%;
 }
 
 .aside{
@@ -45,6 +64,7 @@
     height: 127%;
     background-color: rgb(135, 161, 130);
     align-items: center;
+    border: 3px green solid;
 }
 
 .logo{
@@ -52,6 +72,12 @@
     width: 80%;
     border: 3px green solid;
     border-radius: 40%;
+}
+
+.textoLogo{
+    font-size: 150%;
+    font-family:fantasy;
+    color: rgb(7, 41, 7);
 }
 
 .div1{
