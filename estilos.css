@@ -54,4 +54,35 @@
     justify-content: center;
     background-color:salmon;
     width:70%;
+    padding: 5%;
+    font-size: larger;
+}
+
+
+/*              Apartir de aqui, es la pagina de registros                 */
+
+.body__registro{
+    display: flex;
+    justify-content: center;
+}
+
+.form__registro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    margin: 5%;
+    border:chartreuse solid 15px;
+}
+
+.form__registro label{
+    font-size: larger;
+    color: blue;
+    margin: 10%;
+}
+
+.form__registro button{
+    margin: 15%;
+    padding: 10%;
+    background-color: aquamarine;
 }
