@@ -25,8 +25,8 @@ function validar_contrasena(stringA){
 }
 
 function confirmar_contrasena(stringA, stringB){
-    if(stringB.length>=6){
-        if(stringA==stringB){
+    if(validar_contrasena(stringB)==true){
+        if(stringA===stringB){
             return true;
         }
         else{
@@ -39,6 +39,6 @@ function confirmar_contrasena(stringA, stringB){
 }
 
 
-// module.exports.validar_nombre_usuario = validar_nombre_usuario;
-// module.exports.validar_contrasena=validar_contrasena;
-// module.exports.confirmar_contrasena=confirmar_contrasena;
+module.exports.validar_nombre_usuario = validar_nombre_usuario;
+module.exports.validar_contrasena=validar_contrasena;
+module.exports.confirmar_contrasena=confirmar_contrasena;
