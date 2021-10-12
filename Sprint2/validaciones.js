@@ -1,5 +1,6 @@
 // /*var string = 'Hola'*/
 
+<<<<<<< HEAD
 //function validar_nombre_usuario(string){
     // if(string.length>=6 & string.length<=30){
     //     return true;
@@ -8,6 +9,16 @@
     //     return false;
     // }
 //}
+=======
+function validar_nombre_usuario(string){
+    if(string.length>=6 && string.length<=30){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+>>>>>>> 4a62a500d26720929e69501cf843d538dc2787f1
 
 function validar_contrasena(string){
     // if(string.length>=6){
@@ -19,6 +30,7 @@ function validar_contrasena(string){
     alert("Esto es una alerta")
 }
 
+<<<<<<< HEAD
 // function confirmar_contrasena(stringA, stringB){
 //     if(stringB.length>=6){
 //         if(stringA=stringB){
@@ -32,6 +44,21 @@ function validar_contrasena(string){
 //         return false;
 //     }
 // }
+=======
+function confirmar_contrasena(stringA, stringB){
+    if(stringB.length>=6){
+        if(stringA===stringB){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    else{
+        return false;
+    }
+}
+>>>>>>> 4a62a500d26720929e69501cf843d538dc2787f1
 
 //module.exports.validar_nombre_usuario = validar_nombre_usuario;
 //module.exports.validar_contrasena=validar_contrasena;
