@@ -8,7 +8,7 @@ boton_registro.addEventListener("click", validar_nombre_usuario, validar_nombre_
 
 function validar_nombre_usuario(string){
     if(string.length>=6 && string.length<=30){
-        if([a-zA-Z].test(String)==true){
+        if([a-zA-Z].test(string)==true){
             return true;
     }
         }
