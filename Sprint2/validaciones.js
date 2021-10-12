@@ -1,7 +1,7 @@
 /*var string = 'Hola'*/
 
 function validar_nombre_usuario(string){
-    if(string.length>=6 & string.length<=30){
+    if(string.length>=6 && string.length<=30){
         return true;
     }
     else{
@@ -20,7 +20,7 @@ function validar_contrasena(string){
 
 function confirmar_contrasena(stringA, stringB){
     if(stringB.length>=6){
-        if(stringA=stringB){
+        if(stringA===stringB){
             return true;
         }
         else{
