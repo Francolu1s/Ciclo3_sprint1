@@ -1,48 +1,47 @@
-const string =document.querySelector("#in_nombre_usuario");
-const stringA =document.querySelector("#in_contrasena");
-const stringB =document.querySelector("#in_confirmar_contrasena");
-const boton_registro =document.querySelector("#btn_registrar_usuario");
+const string =document.getElementById("#in_nombre_usuario");
+const stringA =document.getElementById("#in_contrasena");
+const stringB =document.getElementById("#in_confirmar_contrasena");
+const boton_registro =document.getElementById("#btn_registrar_usuario");
 
-boton_registro.addEventListener("click", validar_nombre_usuario, validar_nombre_usuario, validar_contrasena, confirmar_contrasena);
+const patronNombre = /^[a-zA-Z]{6,30}$/g;
+const patronContrasena = /^[A-Z0-9]{6,}$/g;
 
+let registros =[];
 
-function validar_nombre_usuario(string){
-    if(string.length>=6 && string.length<=30){
-        if([a-zA-Z].test(string)==true){
-            return true;
-    }
-        }
-    else{
-        return false;
-    }
-}
+boton_registro.addEventListener("click", agregarRegistro());
 
-function validar_contrasena(stringA){
-    if(stringA.length>=6){
-        if([a-zA-Z0-9].test(stringA)==true){
-            return true;
-        }
-    }
-    else{
-    return false;
+class MiConstructor{
+    constructor(){
+        this.usuario=string.value;
+        this.contrasena=stringA.value;
+        this.confirmacion=stringB.value;
     }
 }
 
-function confirmar_contrasena(stringA, stringB){
-    if(validar_contrasena(stringB)==true){
-        if(stringA===stringB){
-            return true;
+function agregarRegistro(){
+    let usuarioCreado=new MiConstructor();
+    if(patronNombre.test(usuarioCreado.usuario)==true){
+        if(patronContrasena.test(usuarioCreado.contrasena)==true){
+            if(patronContrasena.test(usuarioCreado.confirmacion)==true){
+                if(usuarioCreado.contrasena===usuarioCreado.confirmacion){
+                    console.log("Se registro el usuario");
+                }else{console.log("La confirmacion no coincide con la contraseña");
+                }
+            }else{console.log("La confirmación no es apta");
+            }
+        }else{console.log("La contraseña no es apta");
         }
-        else{
-            return false;
-        }
-    }
-    else{
-        return false;
+    }else{console.log("El usuario no es apto");
     }
 }
-
+/*
+function OrdenarArreglo(arreglo){}
 
 module.exports.validar_nombre_usuario = validar_nombre_usuario;
 module.exports.validar_contrasena=validar_contrasena;
 module.exports.confirmar_contrasena=confirmar_contrasena;
+
+module.exports.registros = registros;
+module.exports.OrdenarArreglo=OrdenarArreglo;
+module.exports.agregarRegistro=agregarRegistro;
+*/
